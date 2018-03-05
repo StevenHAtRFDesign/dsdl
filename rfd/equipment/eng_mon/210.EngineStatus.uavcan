@@ -1,0 +1,16 @@
+# RFD Engine Monitor EngineStatus
+# typedef struct 'EngineStatus'
+# 28/08/17
+
+## Data from client sent to server 
+uint8 Engine			# Engine Number Index
+
+---
+
+## Data returned from server to client
+uint8 Numof_Engines		# Total Number of Engines
+uint32[10] ICE1000RPM		# Engine RPM Bins ? mins in RPM bins(1000RPM) ? minutes uint32[10]
+uint32[32] ICEEng10degC		# Temp Ch0 Bins ENGT ? seconds in 10 deg bins uint32[32]
+uint32[100] ICEExh10degC	# Temp Ch0 Bins EXHT ? seconds in 10 deg bins uint32[100]
+uint64 FaultBits		# Fault Bits ? 64 bit
+uint32[64] FaultStartSec

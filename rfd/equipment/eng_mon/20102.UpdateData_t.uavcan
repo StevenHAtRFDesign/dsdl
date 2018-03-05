@@ -1,0 +1,8 @@
+# RFD Engine Monitor Update_Data_t
+# typedef struct 'Update_Data_t'
+# 28/08/17
+
+StdData_t SData
+int16 AccX
+int16 AccY
+int16 AccZ

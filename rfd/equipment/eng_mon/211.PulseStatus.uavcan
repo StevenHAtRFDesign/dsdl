@@ -1,0 +1,14 @@
+# RFD Engine Monitor PulseStatus
+# typedef struct 'PulseStatus'
+# 28/08/17
+
+## Data from client sent to server 
+uint16 P_Channel		# Pulse Channel Number Index
+
+---
+
+## Data returned from server to client
+uint16 Numof_Channels
+uint16 PW_Channel0
+uint16 PW_Channel1
+bool ClearFaultBits

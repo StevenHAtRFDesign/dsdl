@@ -1,0 +1,20 @@
+# RFD Engine Monitor Standard Data Type
+# typedef struct 'StdData_t'
+# 28/08/17
+
+uint16 ICEMotServoUS 	# Output. Pulse Width Ch0. Petrol Engine Throttle
+uint16 DCMotServoUS 	# Output ? Pulse Width Ch1 ? Electric Engine Throttle
+float32 ICERPM		# Input ? Rate  (Freq) Ch0 ? Engine RPM - float
+uint16 ThrustReqUS	# Input ? Rate (Width) Ch1 ? Thrust Input (Will use CAN later)
+uint16 IgnCutReqUS	# Input ? Rate(Width) Ch2 ? Ignition Cut (Will use CAN later)  (also will be Pulse counter in Copter Monitor)
+float32 Duty8BitCh0	# Output ? PWM Duty Ch0 ? LED1 (or other) - % float
+float32 Duty8BitCh1	# Output ? PWM Duty Ch1 ? LED2 (or other) - % float
+float32 Duty8BitCh2	# Output ? PWM Duty Ch2 ? LED3 (or other) - % float
+uint16[16] ICEVibX	# Input ? Noise/Vibration Ch0 ? Engine X Vibration ? uint16[16]
+uint16[16] ICEVibY	# Input ? Noise/Vibration Ch1 ? Engine Y Vibration ? uint16[16]
+float32 ICEEngDegC	# Input ? ADC Ch0 ? Engine Temp ? degC  float
+float32 ICEExhDegC	# Input ? ADC Ch1 ? Exhaust Temp ? degC  float
+float32 Health		# Inferred - Engine Health - 0-65535
+uint64 FaultBits	# Fault Bits ? 64 bit fields uint64
+uint32 ServiceSecs	# Inferred ? Service seconds ? seconds uint32
+bool ICEIgnCut		# Output ? P Chan FET Ch0 ? Ignition Cut ? bool
